@@ -4,7 +4,7 @@
 const dogs=[
   {weight:22, currFood:250, owners:['Alice','Bob']},
   {weight:8, currFood:200, owners:['Matilda']},
-  {weight:13, currFood:275, owners:['Sarah','John']},
+  {weight:13, currFood:192, owners:['Sarah','John']},
   {weight:32, currFood:340, owners:['Michael','Bob']},
 ]
 //using for each is recommended food
@@ -28,3 +28,6 @@ console.log(`${ownersTooMuch.join(' and ')}'s  dogs are eating Too much`)
 
 const ownersLittle=dogs.filter(dog=>dog.currFood< dog.calculateRecommendedFood).flatMap(dog=>dog.owners)
 console.log(`${ownersLittle.join(' and ')}'s  dogs are eating Too little`)
+
+const eatingExactly=dogs.some(dog=>dog.currFood===dog.calculateRecommendedFood)
+console.log(eatingExactly)
