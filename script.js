@@ -26,3 +26,5 @@ const ownersTooMuch=dogs.filter(dog=>(dog.currFood>dog.calculateRecommendedFood)
 console.log(ownersTooMuch.flatMap(dog=>dog.owners))
 
 
+const ownersLittle=dogs.filter(dog=>dog.currFood< dog.calculateRecommendedFood).flatMap(dog=>dog.owners)
+console.log(ownersLittle)
