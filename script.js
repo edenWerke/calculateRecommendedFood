@@ -22,9 +22,9 @@ console.log(dogs)
 const SarahDog=dogs.find(dog=>dog.owners.includes('Sarah'))
 console.log(`${SarahDog.currFood> SarahDog.calculateRecommendedFood ? 'eating too much':'eating too little'}`)
 
-const ownersTooMuch=dogs.filter(dog=>(dog.currFood>dog.calculateRecommendedFood))
-console.log(ownersTooMuch.flatMap(dog=>dog.owners))
+const ownersTooMuch=dogs.filter(dog=>dog.currFood> dog.calculateRecommendedFood).flatMap(dog=>dog.owners)
+console.log(`${ownersTooMuch.join(' and ')}'s  dogs are eating Too much`)
 
 
 const ownersLittle=dogs.filter(dog=>dog.currFood< dog.calculateRecommendedFood).flatMap(dog=>dog.owners)
-console.log(ownersLittle)
+console.log(`${ownersLittle.join(' and ')}'s  dogs are eating Too little`)
