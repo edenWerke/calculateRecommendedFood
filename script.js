@@ -32,5 +32,11 @@ console.log(`${ownersLittle.join(' and ')}'s  dogs are eating Too little`)
 const eatingExactly=dogs.some(dog=>dog.currFood===dog.calculateRecommendedFood)
 console.log(eatingExactly)
 
-const eatingOkayAmount=dogs.some(dog=>dog.currFood>(dog.calculateRecommendedFood*0.1)&&dog.currFood<(dog.calculateRecommendedFood*1.10))
+const eatingOkayAmount=dogs.some(dog=>dog.currFood>(dog.calculateRecommendedFood*0.90)&&dog.currFood<(dog.calculateRecommendedFood*1.10))
 console.log(eatingOkayAmount)
+
+const okayDogs=dogs.filter(dog=>dog.currFood>(dog.calculateRecommendedFood*0.1)&&dog.currFood<(dog.calculateRecommendedFood*1.10))
+console.log(okayDogs)
+const newCopy=dogs.slice()
+newCopy.sort((a,b)=>b.calculateRecommendedFood-a.calculateRecommendedFood)
+console.log(newCopy)
