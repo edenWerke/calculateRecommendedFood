@@ -31,3 +31,6 @@ console.log(`${ownersLittle.join(' and ')}'s  dogs are eating Too little`)
 
 const eatingExactly=dogs.some(dog=>dog.currFood===dog.calculateRecommendedFood)
 console.log(eatingExactly)
+
+const eatingOkayAmount=dogs.some(dog=>dog.currFood>(dog.calculateRecommendedFood*0.1)&&dog.currFood<(dog.calculateRecommendedFood*1.10))
+console.log(eatingOkayAmount)
