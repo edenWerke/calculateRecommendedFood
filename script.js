@@ -21,3 +21,8 @@ console.log(dogs)
 
 const SarahDog=dogs.find(dog=>dog.owners.includes('Sarah'))
 console.log(`${SarahDog.currFood> SarahDog.calculateRecommendedFood ? 'eating too much':'eating too little'}`)
+
+const ownersTooMuch=dogs.filter(dog=>(dog.currFood>dog.calculateRecommendedFood))
+console.log(ownersTooMuch.flatMap(dog=>dog.owners))
+
+
